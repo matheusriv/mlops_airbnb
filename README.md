@@ -8,8 +8,8 @@ Projeto da disciplina de MLOps da UFRN que tem como objetivo principal colocar e
 
 Certifique-se de atender aos seguintes requisitos:
 
-* Ter instalado `<conda 4.8.2 / Python 3.7.x ou maior>`.
-* Ter uma máquina com `<Windows / Linux / Mac>`.
+* Ter instalado `conda 4.8.2 | Python 3.7 ou maior`.
+* Ter uma máquina com `Windows | Linux | Mac`.
 * Possuir uma conta [wandb](https://wandb.ai/site).
 
 Este projeto usa a ferramenta [wandb](https://wandb.ai/site) que possibilita acompanhar e visualizar todas as partes do seu pipeline de aprendizado de máquina, de conjuntos de dados a modelos de produção.
