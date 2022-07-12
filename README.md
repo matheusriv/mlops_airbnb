@@ -1,4 +1,6 @@
-# Começando com MLOps com dados do Airbnb
+# MLOps com dados do Airbnb: primeiros passos
+
+## Autor: Matheus Rivaldo da Silva
 
 <img src="images/pipeline.png" alt="mlops pipeline">
 
