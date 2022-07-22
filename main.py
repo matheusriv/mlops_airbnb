@@ -46,7 +46,7 @@ def process_args(config: DictConfig):
                 "input_artifact": "raw_data.csv:latest",
                 "artifact_name": "clean_data.csv",
                 "artifact_type": "clean_data",
-                "artifact_description": "Clean data from airbnb house prices in Rio de Janeiro"
+                "artifact_description": "Preprocessed data"
             }
         )
 
