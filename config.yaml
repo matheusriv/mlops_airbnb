@@ -1,0 +1,18 @@
+main:
+  project_name: mlops_airbnb
+  experiment_name: dev
+  execute_steps:
+    - download
+    - preprocess
+    - segregate
+    - check_data
+  random_seed: 42
+data:
+  input_url: "https://drive.google.com/uc?id=1sqkdXwEdN8EQYVkVIKJdVVenKl4BPmHq"
+  reference_dataset: "mlops_airbnb/train_data.csv:latest"
+  sample_dataset: "mlops_airbnb/test_data.csv:latest"
+  ks_alpha: 0.05
+  test_size: 0.3
+  val_size: 0.3
+  stratify: room_type
+  target: price
