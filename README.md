@@ -1,7 +1,5 @@
 # MLOps com dados do Airbnb: primeiros passos
 
-## Autor: Matheus Rivaldo da Silva
-
 <img src="images/pipeline.png" alt="mlops pipeline">
 
 Projeto da disciplina de MLOps da UFRN que tem como objetivo principal colocar em prática o conteúdo referente a Semana 08 da matéria, com o objetivo de construir um pipeline MLOps completo para implementar um modelo AirBnb House Price Prediction (AHPP) em produção
