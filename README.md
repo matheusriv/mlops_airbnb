@@ -28,3 +28,12 @@ Ativando o ambiente criado:
 conda activate mlops_exercise
 ```
 
+## Utilizando o projeto
+
+Para executar todo o projeto, é necessário executar o seguinte comando:
+
+```bash
+mlflow run .
+```
+
+Dê uma olhada no arquivo `config.yaml` e veja se os parâmetros do projeto são bons para você.

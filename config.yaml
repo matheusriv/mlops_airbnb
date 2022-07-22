@@ -6,6 +6,8 @@ main:
     - preprocess
     - segregate
     - check_data
+    - random_forest
+    - evaluate
   random_seed: 42
 data:
   input_url: "https://drive.google.com/uc?id=1sqkdXwEdN8EQYVkVIKJdVVenKl4BPmHq"
@@ -16,3 +18,11 @@ data:
   val_size: 0.3
   stratify: room_type
   target: price
+random_forest_pipeline:
+  random_forest:
+    criterion: "entropy"
+    splitter: "best"
+    max_depth: 13
+  numerical_pipe:
+    model: 0
+  export_artifact: "model_export"

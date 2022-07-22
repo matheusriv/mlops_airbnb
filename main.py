@@ -76,6 +76,36 @@ def process_args(config: DictConfig):
             }
         )
 
+    if "random_forest" in steps_to_execute:
+        # Serialize random forest configuration
+        model_config = os.path.abspath("random_forest_config.yml")
+
+        with open(model_config, "w+") as fp:
+            fp.write(OmegaConf.to_yaml(config["random_forest_pipeline"]))
+
+        _ = mlflow.run(
+            os.path.join(root_path, "random_forest"),
+            "main",
+            parameters={
+                "train_data": "train_data.csv:latest",
+                "model_config": model_config,
+                "export_artifact": config["random_forest_pipeline"]["export_artifact"],
+                "random_seed": config["main"]["random_seed"],
+                "val_size": config["data"]["val_size"],
+                "stratify": config["data"]["stratify"]
+            }
+        )
+
+    if "evaluate" in steps_to_execute:
+        _ = mlflow.run(
+            os.path.join(root_path, "evaluate"),
+            "main",
+            parameters={
+                "model_export": f"{config['random_forest_pipeline']['export_artifact']}:latest",
+                "test_data": "test_data.csv:latest"
+            }
+        )
+
 
 if __name__ == "__main__":
     process_args()
