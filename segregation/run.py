@@ -31,7 +31,7 @@ def process_args(args):
         args.stratify: If provided, it is considered a column name to be used
     for stratified splitting
     """
-    run = wandb.init(project=args.project_name, job_type="data_segregation")
+    run = wandb.init(job_type="data_segregation")
 
     LOGGER.info("Downloading and reading artifact")
     artifact = run.use_artifact(args.input_artifact)

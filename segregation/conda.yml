@@ -1,4 +1,4 @@
-name: split_data
+name: data_segregation
 channels:
   - conda-forge
   - defaults
